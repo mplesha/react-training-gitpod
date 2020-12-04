@@ -13,7 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y google-chrome-stable \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
     && npm install npm -g \
-    && npm install create-react-app -g \
+    && npm install create-react-app@4.0.1 -g \
     && locale-gen en_US.UTF-8
 
 ENV LANG=en_US.UTF-8
