@@ -5,7 +5,7 @@ USER root
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
     && apt-get install -y git curl sudo locales zip unzip \
-    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs \
     && curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list \
@@ -13,7 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y google-chrome-stable \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
     && npm install npm -g \
-    && npm install create-react-app@4.0.1 -g \
+    && npm install create-react-app -g \
     && locale-gen en_US.UTF-8
 
 ENV LANG=en_US.UTF-8
