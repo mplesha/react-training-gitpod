@@ -1,3 +1,3 @@
 # Gitpod config to provide the React training
 
-React 17.0.0
+React 18.1.0
